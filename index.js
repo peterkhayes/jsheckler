@@ -39,7 +39,7 @@ Heckler.prototype.replaceNth = function(input, n) {
   });
 };
 
-var IfNegationHeckler = new Hecker(/([\n\r\s]if\s?)(\(.+\))/, "$1(!$2)");
+var IfNegationHeckler = new Heckler(/([\n\r\s]if\s?)(\(.+\))/, "$1(!$2)");
 
 var ArgShuffleHeckler = new Heckler(/(\()([^\)]*)(\))/, function(match, s1, s2, s3) {
     var args = s2.replace(/\s/g, "").split(",");
